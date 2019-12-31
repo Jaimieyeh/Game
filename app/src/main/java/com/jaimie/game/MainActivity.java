@@ -33,24 +33,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.arrow_up:
                 Log.d("MainActivity","onClick:UP");
-                //gameView.posY-=50;
-                gameView.invalidate();
+//                          gameView.posY-=50;
+//                          gameView.invalidate();
+                gameView.moveUp();
                 break;
             case R.id.arrow_down:
                 Log.d("MainActivity","onClick:DOWN");
-                //gameView.posY = gameView.posY + 50;
-                //亦可寫成gameView.posY+=50;
-                gameView.invalidate();
+//                          gameView.posY = gameView.posY + 50;
+//                          亦可寫成gameView.posY+=50;
+//                          gameView.invalidate();
+                gameView.moveDown();
                 break;
             case R.id.arrow_left:
                 Log.d("MainActivity","onClick:LEFT");
-                gameView.setPosX(gameView.getX()-50);
-                gameView.invalidate();
+//                          gameView.setPosX(gameView.getX()-50);
+//                          gameView.invalidate();
+                gameView.moveLeft();
                 break;
             case R.id.arrow_right:
                 Log.d("MainActivity","onClick:RIGHT");
-                gameView.setPosX(gameView.getPosX()+50);
-                gameView.invalidate();
+//                          gameView.setPosX(gameView.getPosX()+50);
+//                          gameView.invalidate();
+                gameView.moveRight();
                 break;
         }
 

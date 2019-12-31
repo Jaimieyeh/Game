@@ -31,6 +31,33 @@ public class GameView extends View {
 //            canvas.drawBitmap(bitmap, 400, 300+i, paint);
 //        }
     }
+    public void moveRight(){
+        if (posX < getWidth()-200){
+            posX = posX + 50;
+            invalidate();
+        }
+    }
+
+    public void moveLeft(){
+        if (posX > 0){
+            posX = posX - 50;
+            invalidate();
+        }
+    }
+
+    public void moveUp(){
+        if (posY > 50){
+            posY = posY - 50;
+            invalidate();
+        }
+    }
+
+    public void moveDown(){
+        if (posY < getHeight()-300){
+            posY = posY + 50;
+            invalidate();
+        }
+    }
 
     public float getPosX() {
         return posX;
